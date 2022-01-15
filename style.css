@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #000;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.controls {
+  width: 11%;
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls h1 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.clap-pad,
+.cowbell-pad,
+.crash-pad,
+.hihat-pad,
+.kick-pad,
+.openhat-pad,
+.perc-pad,
+.ride-pad,
+.shaker-pad,
+.snare-pad,
+.tom-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+.clap-pad {
+  background: #ffe1a8;
+}
+.cowbell-pad {
+  background: #041f1e;
+}
+.crash-pad {
+  background: #e26d5c;
+}
+.hihat-pad {
+  background: #723d46;
+}
+.kick-pad {
+  background: #0b525b;
+}
+.openhat-pad {
+  background: #80ed99;
+}
+.perc-pad {
+  background: #2a9d8f;
+}
+.ride-pad {
+  background: #457b9d;
+}
+.ride-pad {
+  background: #ff6b6b;
+}
+.shaker-pad {
+  background: #dd6e42;
+}
+.snare-pad {
+  background: #ffe66d;
+}
+.tom-pad {
+  background: #87bfff;
+}
+
+.clap-track,
+.cowbell-track,
+.crash-track,
+.hihat-track,
+.kick-track,
+.openhat-track,
+.perc-track,
+.ride-track,
+.shaker-track,
+.snare-track,
+.tom-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-around;
+}
+
+.clap,
+.cowbell,
+.crash,
+.hihat,
+.kick,
+.openhat,
+.perc,
+.ride,
+.shaker,
+.snare,
+.tom {
+  display: flex;
+}
+
+.play {
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  background-image: linear-gradient(
+    178.2deg,
+    rgba(118, 8, 23, 1) 10.9%,
+    rgba(158, 12, 33, 1) 62.6%
+  );
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-size: 32px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+}

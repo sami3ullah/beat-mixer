@@ -91,6 +91,20 @@ select {
   border-radius: 4px;
 }
 
+.clap-pad.active,
+.cowbell-pad.active,
+.crash-pad.active,
+.hihat-pad.active,
+.kick-pad.active,
+.openhat-pad.active,
+.perc-pad.active,
+.ride-pad.active,
+.shaker-pad.active,
+.snare-pad.active,
+.tom-pad.active {
+  opacity: 0.4;
+}
+
 .clap-pad {
   background: #ffe1a8;
 }

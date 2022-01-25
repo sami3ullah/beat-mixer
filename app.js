@@ -19,6 +19,8 @@ class Drumkit {
     this.bpm = 150;
     //   play button
     this.playBtn = document.querySelector(".play");
+    // keeping track of playing
+    this.isPlaying = null;
   }
 
   activePad() {
@@ -83,10 +85,26 @@ class Drumkit {
   }
 
   start() {
-    const interval = (60 / this.bpm) * 1000;
-    setInterval(() => {
-      this.repeat();
-    }, interval);
+    if (!this.isPlaying) {
+      const interval = (60 / this.bpm) * 1000;
+      this.isPlaying = setInterval(() => {
+        this.repeat();
+      }, interval);
+    } else {
+      clearInterval(this.isPlaying);
+      this.isPlaying = null;
+    }
+  }
+
+  updateButton() {
+    if (!this.isPlaying) {
+      this.playBtn.innerText = "Stop X";
+      this.playBtn.style.backgroundImage =
+        "linear-gradient(178.2deg,rgba(118, 8, 23, 1) 10.9%,rgba(158, 12, 33, 1) 62.6%)";
+    } else {
+      this.playBtn.innerHTML = "Play";
+      this.playBtn.style.background = "#46ad64";
+    }
   }
 }
 
@@ -98,5 +116,6 @@ drumkit.pads.forEach((pad) => {
   });
 });
 drumkit.playBtn.addEventListener("click", () => {
+  drumkit.updateButton();
   drumkit.start();
 });

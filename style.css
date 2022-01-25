@@ -156,28 +156,86 @@ select {
   display: flex;
 }
 
-.play {
+.play-controls {
   padding: 1.5rem 2rem;
-  font-size: 1.5rem;
-  /* background-image: linear-gradient(
-    178.2deg,
-    rgba(118, 8, 23, 1) 10.9%,
-    rgba(158, 12, 33, 1) 62.6%
-  ); */
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
   background: #46ad64;
+}
+
+.play {
+  background: none;
+  font-size: 1.5rem;
   color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
-  margin-top: 3rem;
+  margin-left: 2rem;
   text-transform: uppercase;
   font-size: 32px;
-  position: fixed;
-  bottom: 0;
+}
+
+.tempo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Special styling for WebKit/Blink */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #46ad64;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: #46ad64;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  background: #46ad64;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tempo input {
+  padding: 0.2rem;
+  -webkit-appearance: none;
   width: 100%;
+  cursor: pointer;
+  background: #333;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  margin-left: 10px;
+  font-size: 13px;
+  color: #333;
 }
 
 .mg-bottom {
   margin-bottom: 10%;
+}
+
+.mute.active {
+  opacity: 0.4;
 }
 
 @keyframes playTrack {

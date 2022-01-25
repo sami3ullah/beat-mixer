@@ -13,7 +13,7 @@
         <div class="controls">
           <h1>Clap</h1>
           <button data-track="0" class="mute clap-volume">
-            <i class="fas fa-volume-mute"></i>
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="clap-select" id="clap-select">
             <option value="./sounds/clap-808.wav">808 clap</option>
@@ -39,8 +39,8 @@
       <div class="cowbell-track">
         <div class="controls">
           <h1>cowbell</h1>
-          <button data-track="0" class="mute cowbell-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="1" class="mute cowbell-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="cowbell-select" id="cowbell-select">
             <option value="./sounds/cowbell-808.wav">808 Cowbell</option>
@@ -61,8 +61,8 @@
       <div class="crash-track">
         <div class="controls">
           <h1>Crash</h1>
-          <button data-track="0" class="mute crash-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="2" class="mute crash-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="crash-select" id="crash-select">
             <option value="./sounds/crash-808.wav">808 Crash</option>
@@ -86,8 +86,8 @@
       <div class="hihat-track">
         <div class="controls">
           <h1>Hihat</h1>
-          <button data-track="1" class="mute hihat-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="3" class="mute hihat-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="hihat-select" id="hihat-select">
             <option value="./sounds/hihat-acoustic01.wav">
@@ -125,8 +125,8 @@
       <div class="kick-track">
         <div class="controls">
           <h1>Kick</h1>
-          <button data-track="0" class="mute kick-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="4" class="mute kick-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="kick-select" id="kick-select">
             <option value="./sounds/kick-808.wav">808 Kick</option>
@@ -179,8 +179,8 @@
       <div class="openhat-track">
         <div class="controls">
           <h1>openhat</h1>
-          <button data-track="1" class="mute openhat-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="5" class="mute openhat-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="openhat-select" id="openhat-select">
             <option value="./sounds/openhat-acoustic01.wav">
@@ -210,8 +210,8 @@
       <div class="perc-track">
         <div class="controls">
           <h1>perc</h1>
-          <button data-track="1" class="mute perc-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="6" class="mute perc-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="perc-select" id="perc-select">
             <option value="./sounds/perc-808.wav">808 Perc</option>
@@ -241,8 +241,8 @@
       <div class="ride-track">
         <div class="controls">
           <h1>ride</h1>
-          <button data-track="1" class="mute ride-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="7" class="mute ride-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="ride-select" id="ride-select">
             <option value="./sounds/ride-acoustic01.wav">
@@ -268,8 +268,8 @@
       <div class="shaker-track">
         <div class="controls">
           <h1>shaker</h1>
-          <button data-track="1" class="mute shaker-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="8" class="mute shaker-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="shaker-select" id="shaker-select">
             <option value="./sounds/shaker-analog.wav">Analog Shaker</option>
@@ -292,8 +292,8 @@
       <div class="snare-track">
         <div class="controls">
           <h1>Snare</h1>
-          <button data-track="1" class="mute snare-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="9" class="mute snare-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="snare-select" id="snare-select">
             <option value="./sounds/snare-808.wav">808 Snare</option>
@@ -339,8 +339,8 @@
       <div class="tom-track mg-bottom">
         <div class="controls">
           <h1>tom</h1>
-          <button data-track="1" class="mute tom-volume">
-            <i class="fas fa-volume-mute"></i>
+          <button data-track="10" class="mute tom-volume">
+            <i class="fas fa-volume-up"></i>
           </button>
           <select name="tom-select" id="tom-select">
             <option value="./sounds/tom-808.wav">808 Tom</option>
@@ -365,7 +365,15 @@
           <div class="pad tom-pad b7"></div>
         </div>
       </div>
-      <button class="play">Play</button>
+      <div class="play-controls">
+        <div class="tempo">
+          <input type="range" min="20" max="500" default="150" />
+          <p>
+            Tempo<br /><span class="tempo-nr"><strong>150</strong></span>
+          </p>
+        </div>
+        <button class="play">Play</button>
+      </div>
     </div>
 
     <audio class="clap-sound" src="./sounds/clap-808.wav"></audio>

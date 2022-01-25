@@ -13,6 +13,7 @@ class Drumkit {
     this.shakerAudio = document.querySelector(".shaker-sound");
     this.snareAudio = document.querySelector(".snare-sound");
     this.tomAudio = document.querySelector(".tom-sound");
+    this.selects = document.querySelectorAll("select");
     //   for tracking audio
     this.index = 0;
     //   beats per min(BPM)
@@ -106,16 +107,67 @@ class Drumkit {
       this.playBtn.style.background = "#46ad64";
     }
   }
+
+  changeSound(e) {
+    let selectName = e.target.name;
+    let selectValue = e.target.value;
+
+    switch (selectName) {
+      case "clap-select":
+        this.clapAudio.src = selectValue;
+        break;
+      case "cowbell-select":
+        this.cowbellAudio.src = selectValue;
+        break;
+      case "crash-select":
+        this.crashAudio.src = selectValue;
+        break;
+      case "hihat-select":
+        this.hihatAudio.src = selectValue;
+        break;
+      case "kick-select":
+        this.kickAudio.src = selectValue;
+        break;
+      case "openhat-select":
+        this.openhatAudio.src = selectValue;
+        break;
+      case "perc-select":
+        this.percAudio.src = selectValue;
+        break;
+      case "ride-select":
+        this.rideAudio.src = selectValue;
+        break;
+      case "shaker-select":
+        this.shakerAudio.src = selectValue;
+        break;
+      case "snare-select":
+        this.snareAudio.src = selectValue;
+        break;
+      case "tom-select":
+        this.tomAudio.src = selectValue;
+        break;
+    }
+  }
 }
 
+// class object
 const drumkit = new Drumkit();
+
+// event listeners
 drumkit.pads.forEach((pad) => {
   pad.addEventListener("click", drumkit.activePad);
   pad.addEventListener("animationend", function () {
     this.style.animation = "";
   });
 });
+
 drumkit.playBtn.addEventListener("click", () => {
   drumkit.updateButton();
   drumkit.start();
+});
+
+drumkit.selects.forEach((select) => {
+  select.addEventListener("change", (e) => {
+    drumkit.changeSound(e);
+  });
 });
